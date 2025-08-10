@@ -1,9 +1,10 @@
-# SMART: spatial multiomics aggregation with graphical metric learning
+# SMART: Spatial multi-omic aggregation using graph neural networks and metric learning
 This repository contains SMART model and jupyter notebooks essential for reproducing the benchmarking outcomes shown in the paper.
-![image](https://github.com/user-attachments/assets/01cf7c5c-6ab7-4828-a873-fef2d72ebc3a)
+![图片2](https://github.com/user-attachments/assets/eee3641a-ba5c-4453-9862-442916f443a5)
+
 
 ## Overview
-Spatial multi-omics provide a comprehensive aspect to decipher the microenvironment and heterogeneity in different spatial domain within tissues. To uniformly analyze the spatial multi-omics data, computational methods are desired to integrate and represent multiple omics with spatial information in uniform space. Here, we present SMART, a deep learning model based on graphical neural network aggregation and metric learning. SMART leverages a modality-independent modular and stacking framework with spatial coordinates and adjusts the aggregation using the constructed triplet relationship. SMART excels in accurately identifying spatial regions of anatomical structures or cell types, compatible with spatial datasets of any type and number of omics layers, while demonstrating exceptional computational efficiency and scalability on large datasets. Additionally, the variant of SMART, SMART-MS, expands its functionality to integrate multi-omics spatial data across multiple tissue sections. 
+Spatial multi-omics enables the exploration of tissue microenvironments and heterogeneity from the perspective of different omics modalities across distinct spatial domains within tissues. To jointly analyze the spatial multi-omics data, computational methods are desired to integrate multiple omics with spatial information into a unified space. Here, we present SMART (Spatial Multi-omic Aggregation using gRaph neural networks and meTric learning), a computational framework for spatial multi-omic integration. SMART leverages a modality-independent modular and stacking framework with spatial coordinates and adjusts the aggregation using triplet relationships. SMART excels at accurately identifying spatial regions of anatomical structures, compatible with spatial datasets of any type and number of omics layers, while demonstrating exceptional computational efficiency and scalability on large datasets. Moreover, a variant of SMART, SMART-MS, expands its capabilities to integrate spatial multi-omics data across multiple tissue sections. In summary, SMART provides a versatile, efficient, and scalable solution for integrating spatial multi-omics data.
 
 ## Requirements
 - python==3.9
@@ -20,10 +21,4 @@ Spatial multi-omics provide a comprehensive aspect to decipher the microenvironm
 - R==4.3.0
 
 ## Datasets
-The study contains 6 data set types.
-The 10X Visium Human Lymph Node data can be accessed from the Gene Expression Omnibus (GEO) with accession code GSE263617 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE263617). 
-The MISAR-seq mouse brain data can be accessed from National Genomics Data Center with accession number OEP003285 (https://www.biosino.org/node/project/detail/OEP003285). 
-The Stereo-CITE-seq mouse thymus data can be accessed from BGI STOmics Cloud (https://cloud.stomics.tech/). 
-The spatial CUT&Tag–RNA-seq mouse brain data can be accessed at GEO with accession code GSE205055 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE205055) or UCSC Cell and Genome Browser (https://brain-spatial-omics.cells.ucsc.edu).
-The STARmap and RIBOmap mouse brain data can be accessed from Zenodo (https://zenodo.org/record/8041114) or Single Cell Portal (SCP) (https://singlecell.broadinstitute.org/single_cell/study/SCP1835). 
-The SPOTS mouse spleen data can be accessed at GEO with accession code GSE198353 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE198353).
+The 10X Visium Human Lymph Node data can be accessed from the Gene Expression Omnibus (GEO) with accession code GSE263617 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE263617). The MISAR-seq mouse brain data can be accessed from National Genomics Data Center with accession number OEP003285 (https://www.biosino.org/node/project/detail/OEP003285). The Stereo-CITE-seq data can be accessed from BGI STOmics Cloud (https://cloud.stomics.tech/). The spatial CUT&Tag–RNA-seq and spatial ATAC–RNA-seq mouse brain data can be accessed at GEO with accession code GSE205055 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE205055) or UCSC Cell and Genome Browser (https://brain-spatial-omics.cells.ucsc.edu). The STARmap and RIBOmap mouse brain data can be accessed from Zenodo (https://zenodo.org/record/8041114) or Single Cell Portal (SCP) (https://singlecell.broadinstitute.org/single_cell/study/SCP1835). The SPOTS mouse spleen data can be accessed at GEO with accession code GSE198353 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE198353). The 10X Visium Human Tonsil data can be accessed from https://zenodo.org/records/12654113/preview/data_imputation.zip?include_deleted=0#tree_item0.
