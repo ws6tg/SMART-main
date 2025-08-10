@@ -1,6 +1,7 @@
 # SMART: Spatial multi-omic aggregation using graph neural networks and metric learning
 This repository contains SMART model and jupyter notebooks essential for reproducing the benchmarking outcomes shown in the paper.
-![图片2](https://github.com/user-attachments/assets/eee3641a-ba5c-4453-9862-442916f443a5)
+![图片1](https://github.com/user-attachments/assets/2d998716-1917-4c7e-b75f-a66ff46828c2)
+
 
 
 ## Overview
