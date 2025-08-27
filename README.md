@@ -29,7 +29,14 @@ If the "git clone" command does not work with your system, you can also download
 
 ### 2.2 Environment setup
 
-The package has been successfully tested in a Linux environment of python version 3.9.23, R==4.3.0,and so on. An option to set up the environment is to use Conda (https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html).
+The SMART package has been successfully tested in a **Linux environment** with the following key components:
+
+- **Python**: 3.9.23
+- **R**: 4.3.0
+- **PyTorch** and its companion packages: `torch-scatter`, `torch-sparse`, `torch-geometric`.
+- Other dependencies listed in `requirements.txt`
+
+It is recommended to use **Conda** to manage the environment. Conda simplifies the installation of Python, R, and other libraries. See the Conda official documentation(https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) for installation instructions.
 
 You can use the following command to create an environment for SMART:
 
@@ -38,11 +45,23 @@ You can use the following command to create an environment for SMART:
 conda create -n smart python=3.9.23 -y
 # 2. activate conda environment
 conda activate smart
-# 3. use conda install R(r-base=4.3.0)
+# 3. install R (R base 4.3.0) from conda-forge
 conda install -c conda-forge r-base=4.3.0 -y
-# 4. use pip install other dependencies (root in '\SMART-main')
+# 4. install Python dependencies from requirements.txt (run from root directory)
 pip install -r requirements.txt
 ```
+
+#### Installing PyTorch Geometric companion packages
+
+PyTorch Geometric (PyG) requires additional packages (`torch-scatter`, `torch-sparse`). These packages need to be installed from PyG’s wheel files (https://data.pyg.org/whl/) compatible with your PyTorch and CUDA versions. For example:
+
+```
+# Example for PyTorch 2.4.1 + CUDA 12.1
+pip install torch-scatter-2.1.2+pt24cu121-cp39-cp39-linux_x86_64.whl
+pip install torch-sparse-0.6.18+pt24cu121-cp39-cp39-linux_x86_64.whl
+```
+
+See the official installation guide for the correct wheels for your platform: PyTorch Geometric installation (https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html).
 
 You need to install `mclust` package by following these steps:
 
