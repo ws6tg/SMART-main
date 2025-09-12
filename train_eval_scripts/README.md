@@ -1,6 +1,6 @@
 # SMART Training and Evaluation
 
-Follow the **Environment Setup Guide**  in [SMART-main/README.md at main · ws6tg/SMART-main](https://github.com/ws6tg/SMART-main/blob/main/README.md). The script `SMART_train_eval.py` integrates both training and evaluation workflows for multi-omics spatial data.
+Follow the **Environment Setup Guide**  in [SMART-main/README.md at main · ws6tg/SMART-main](https://github.com/ws6tg/SMART-main/blob/main/README.md). The script `SMART_train_eval.py` integrates both training and evaluation workflows for multi-omics spatial data, and the demo on the simulated_data dataset runs in approximately 2–3 minutes with GPU acceleration.
 
 ## Dataset Requirements
 
