@@ -1,1 +1,1 @@
-Download data from zenodo(XXXX)
+Download data from zenodo (https://doi.org/10.5281/zenodo.17093158).
