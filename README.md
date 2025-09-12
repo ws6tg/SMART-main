@@ -9,6 +9,8 @@ Spatial multi-omics enables the exploration of tissue microenvironments and hete
 
 ## 2. Environment setup and code  compilation
 
+Note: Installation, including dependencies, typically completes within 10–15 minutes on a normal desktop computer.
+
 ### 2.1 Download the package
 
 The package can be download by running the following command in the terminal:
