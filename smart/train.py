@@ -62,11 +62,19 @@ def train_SMART(
     triplet_samples_list : list of tuple
         Each tuple contains (anchors, positives, negatives) indices for triplet loss.
     weights : list of float, default=[1, 1, 1, 1]
-        Loss weights in the following order:
-        [triplet_loss_modality1, triplet_loss_modality2,
-         reconstruction_loss_modality1, reconstruction_loss_modality2].
+        Loss weights in the following order (matching the implementation):
+        [reconstruction_loss_modality1, reconstruction_loss_modality2,
+        triplet_loss_modality1,        triplet_loss_modality2].
+
+        - reconstruction_loss_modalityX: weight for reconstruction (MSE) loss of modality X
         - triplet_loss_modalityX: weight for triplet loss of modality X
-        - reconstruction_loss_modalityX: weight for reconstruction loss of modality X
+
+        Notes
+        -----
+        Let M be the number of modalities (len(features)).
+        `weights` should have length 2*M:
+            weights[0:M]     -> reconstruction weights for each modality
+            weights[M:2*M]   -> triplet weights for each modality
     emb_dim : int, default=64
         Dimension of shared latent embedding.
     n_epochs : int, default=500
@@ -190,11 +198,19 @@ def train_SMART_MS(
     triplet_samples_list : list of tuple
         Each tuple contains (anchors, positives, negatives) indices for triplet loss.
     weights : list of float, default=[1, 1, 1, 1]
-        Loss weights in the following order:
-        [triplet_loss_modality1, triplet_loss_modality2,
-         reconstruction_loss_modality1, reconstruction_loss_modality2].
+        Loss weights in the following order (matching the implementation):
+        [reconstruction_loss_modality1, reconstruction_loss_modality2,
+        triplet_loss_modality1,        triplet_loss_modality2].
+
+        - reconstruction_loss_modalityX: weight for reconstruction (MSE) loss of modality X
         - triplet_loss_modalityX: weight for triplet loss of modality X
-        - reconstruction_loss_modalityX: weight for reconstruction loss of modality X
+
+        Notes
+        -----
+        Let M be the number of modalities (len(features)).
+        `weights` should have length 2*M:
+            weights[0:M]     -> reconstruction weights for each modality
+            weights[M:2*M]   -> triplet weights for each modality
     emb_dim : int, default=64
         Dimension of shared latent embedding.
     n_epochs : int, default=500
