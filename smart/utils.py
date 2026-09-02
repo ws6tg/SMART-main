@@ -132,9 +132,8 @@ def mclust_R(adata, num_cluster, modelNames="EEE", used_obsm="emb_pca", random_s
 
     r_random_seed = robjects.r["set.seed"]
     r_random_seed(random_seed)
-    rmclust = robjects.r["Mclust"]
-
-    res = rmclust(rpy2.robjects.numpy2ri.numpy2rpy(adata.obsm[used_obsm]), num_cluster, modelNames)
+    robjects.globalenv[".smart_mclust_data"] = rpy2.robjects.numpy2ri.numpy2rpy(adata.obsm[used_obsm])
+    res = robjects.r('Mclust(as.matrix(.smart_mclust_data), %d, "%s")' % (num_cluster, modelNames))
     mclust_res = np.array(res[-2])
 
     adata.obs['mclust'] = mclust_res
